@@ -14,7 +14,7 @@ def guess(n):
         guess=input(a)
         guesslist=[]
         for i in guess:
-            guesslist3.append(int(i))
+            guesslist.append(int(i))
     else:
         return guesslist
     guess(n)
