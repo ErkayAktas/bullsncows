@@ -1,20 +1,18 @@
 def guess(n):
     import sys
-    a=(6-n)*" "  
-    guess=input(a)
-    if int(guess)==-1: 
-        print(f"the number is: {m}")
-        sys.exit()
     guesslist=[]
-    for i in guess:
-        guesslist.append(int(i))
-    while len(guesslist)!=n or len(set(guesslist))!=n:
-        print("please numbers not equal")
+    while len(guesslist)!=n or len(set(guesslist))!=n: 
         a=(6-n)*" "  
         guess=input(a)
+        if int(guess)==-1: 
+            print(f"the number is: {m}")
+            sys.exit()
         guesslist=[]
         for i in guess:
             guesslist.append(int(i))
+        if len(guesslist)!=n or len(set(guesslist))!=n:
+            print("please numbers not equal")
+            continue
     else:
         return guesslist
     guess(n)
